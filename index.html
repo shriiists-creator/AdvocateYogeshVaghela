@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Advocate Yogesh Vaghela - Advocate & Notary in Vadodara. Expert in Divorce, Family Law, and Criminal Defense.">
+    <link rel="icon" href="images/logo.jpg" type="image/jpg" fetchpriority="low">
+    <title>Advocate Yogesh Vaghela | Advocate & Notary Vadodara</title>
+    <link rel="preload" as="image" href="images/logo.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070"
+        fetchpriority="high">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=2072"
+        fetchpriority="high">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #0a2f1c;
+            /* Dark Green */
+            --secondary: #113a25;
+            /* Deep Forest Green */
+            --gold: #C0C0C0;
+            /* Silver */
+            --gold-light: #E8E8E8;
+            /* Light Silver */
+            --text-light: #f1f5f9;
+            --text-muted: #929292;
+            --white: #ffffff;
+            --nav-height: 97px;
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary) !important;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .text-muted {
+            color: var(--text-muted) !important;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: var(--text-light);
+            background-color: var(--primary);
+            overflow-x: hidden;
+            padding-top: var(--nav-height);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+            color: var(--white);
+        }
+
+        .text-gold {
+            color: var(--gold) !important;
+        }
+
+        .bg-gold {
+            background-color: var(--gold) !important;
+        }
+
+        /* --- Buttons --- */
+        .btn-gold {
+            background: linear-gradient(45deg, var(--gold), var(--gold-light));
+            color: var(--primary);
+            font-weight: 700;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light {
+            color: var(--gold-light);
+            font-weight: 700;
+            padding: 12px 30px;
+            border: 1px solid var(--gold-light);
+            border-radius: 2px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            background: var(--primary);
+            color: var(--gold-light);
+            border: 1px solid var(--gold-light);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+            color: var(--primary);
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            height: var(--nav-height);
+            background: rgba(10, 47, 28, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .navbar-brand {
+            width: 80px;
+            padding: 0;
+        }
+
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-link:hover {
+            color: var(--gold) !important;
+        }
+
+        /* --- Hero Section --- */
+        /* --- Home / Hero Section Logic --- */
+        #home {
+            position: relative;
+            width: 100%;
+            /* Allow the section to be at least full screen, but grow if needed */
+            min-height: calc(100vh - var(--nav-height));
+            height: auto;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            /* Swiper needs to fill the parent, but not be restricted to a pixel height */
+            height: 100%;
+            min-height: calc(100vh - var(--nav-height));
+        }
+
+        .hero-slide {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            /* FLEX BOX: This allows the slide to expand vertically */
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - var(--nav-height));
+            height: auto;
+            /* Padding prevents text from touching edges on small screens */
+            padding: 80px 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(10, 47, 28, 0.95) 0%, rgba(10, 47, 28, 0.7) 50%, rgba(10, 47, 28, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            /* Margin: auto on a flex item centers it vertically only if there's space */
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 100%;
+        }
+
+        /* --- Typography & Elements --- */
+        .hero-subtitle {
+            display: inline-block;
+            border-left: 3px solid var(--gold);
+            padding-left: 15px;
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 4vw, 3.6rem);
+            /* Scalable font */
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+
+        /* Swiper specific overrides */
+        .swiper-pagination-bullet-active {
+            background: var(--gold) !important;
+            opacity: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: clamp(40px, 8vw, 60px);
+        }
+
+        /* Mobile Tweak: Ensure the banner doesn't feel cramped */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding-top: 60px;
+                padding-bottom: 20px;
+            }
+        }
+
+        /* --- About / Intro --- */
+        .section-title {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .center-title::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-img-wrapper {
+            position: relative;
+            padding: 20px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .about-img-wrapper img {
+            width: 100%;
+            display: block;
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: 40px;
+            right: -20px;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* --- Services (Cards) --- */
+        .service-card {
+            background: var(--secondary);
+            padding: 40px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 0;
+            background: var(--gold);
+            transition: 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: #164a2e;
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .service-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .service-list li::before {
+            content: '•';
+            color: var(--gold);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* --- Filters --- */
+        .filter-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            padding: 8px 20px;
+            margin: 0 5px;
+            transition: 0.3s;
+        }
+
+        .filters-button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--gold);
+            color: var(--primary);
+            border-color: var(--gold);
+        }
+
+        /* --- Stats Strip --- */
+        .stats-section {
+            background: var(--gold);
+            color: var(--primary);
+            padding: 60px 0;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary);
+        }
+
+        .stat-item p {
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+
+        /* --- NEW: Team Section (Matches Screenshot) --- */
+        .team-member {
+            position: relative;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .team-img-box {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .team-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: 0.5s;
+        }
+
+        .team-member:hover .team-img-box img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            text-align: center;
+            color: black;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            transform: translateY(0);
+        }
+
+        .subtitle {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Fixed Team Info Alignment */
+        .team-info {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* Centers the box regardless of width */
+            width: 85%;
+            background: white;
+            padding: 15px;
+            text-align: center;
+            color: black;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+        }
+
+        .team-member:hover .team-info {
+            bottom: 30px;
+        }
+
+        .team-info h5 {
+            color: black;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .team-info span {
+            color: var(--gold);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+
+        /* --- Testimonial --- */
+        .testimonial-card {
+            background: var(--secondary);
+            padding: 40px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .stars {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        /* --- Contact Form Area --- */
+        .contact-wrapper {
+            background: var(--secondary);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-img {
+            background-image: url('https://images.unsplash.com/photo-1589578527966-fd7105698a35?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .contact-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 47, 28, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .form-control,
+        .form-select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 15px;
+            border-radius: 0;
+        }
+
+        .form-select option {
+            color: var(--gold-light);
+            background-color: var(--primary);
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--gold);
+            color: white;
+            box-shadow: none;
+        }
+
+        /* Input Contrast Fix */
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+
+        /* --- Mobile & Tablet Overrides --- */
+        @media (max-width: 991.98px) {
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                border-left: none;
+                border-bottom: 3px solid var(--gold);
+                padding-left: 0;
+                padding-bottom: 5px;
+            }
+
+            .about-img-wrapper {
+                max-width: 500px;
+                margin: 0 auto 3rem;
+            }
+
+            .experience-badge {
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .navbar-brand {
+                width: 60px;
+                /* Smaller logo on phones */
+            }
+
+            .btn-gold,
+            .btn-outline-light {
+                width: 100%;
+                /* Full width buttons on mobile */
+                margin-bottom: 10px;
+            }
+
+            .stat-item h3 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .filters-button-group {
+                justify-content: start;
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarContent">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img loading="eager" src="images/logo.jpg" alt="Advocate Yogesh Vaghela">
+            </a>
+            <button class="navbar-toggler bg-gold" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title text-gold">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-lg-center" id="navbarContent">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#practice">Practice Areas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <a href="#contact" class="btn btn-gold">
+                                <span class="iconify me-2" data-icon="mdi:gavel"></span> Free Consultation
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="swiper hero-swiper hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070');">
+                    <div class="hero-overlay"></div>
+                    <div class="container hero-content">
+                        <div class="col-lg-8" data-aos="fade-up">
+                            <span class="hero-subtitle">Advocate & Notary</span>
+                            <h1 class="hero-title">Advocate Yogesh Vaghela <br> <span class="text-gold">Legal
+                                    Excellence</span></h1>
+                            <p class="lead text-light mb-4 col-xl-8" style="max-width: 600px;">Expert legal
+                                representation in Vadodara. Specializing in Family Law, Divorce cases, and Notary
+                                services.</p>
+                            <div class="d-flex gap-3 flex-column flex-md-row">
+                                <a href="#contact" class="btn btn-gold">Book Appointment</a>
+                                <a href="tel:+919377777516" class="btn btn-outline-light">Call: +91 93777 77516</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=2072');">
+                    <div class="hero-overlay"></div>
+                    <div class="container hero-content">
+                        <div class="col-lg-8" data-aos="fade-up">
+                            <span class="hero-subtitle">Trusted Legal Advisor</span>
+                            <h1 class="hero-title">Protecting Your Rights <br> <span class="text-gold">Securing Your
+                                    Future.</span></h1>
+                            <p class="lead text-light mb-4 col-xl-8">Top-rated Advocate in Vadodara with extensive
+                                experience in Civil and Criminal matters.</p>
+                            <a href="#practice" class="btn btn-gold">View Practice Areas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container py-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="about-img-wrapper">
+                        <img loading="lazy" src="https://img.freepik.com/premium-photo/sign-contract-business-front-judge-lawyer-confirm-agreement-both-sides_928131-3466.jpg"
+                            alt="Lawyer Desk">
+                        <div class="experience-badge">
+                            <span class="d-block h2 mb-0">15+</span>
+                            <span class="small text-uppercase">Years Exp.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <div class="section-title">
+                        <span class="text-gold text-uppercase ls-1 fw-bold">About The Advocate</span>
+                        <h2 class="mt-2">Advocate Yogesh Vaghela</h2>
+                    </div>
+                    <p class="text-muted mb-4">We are a premier legal service provider based in Gotri, Vadodara,
+                        dedicated to providing top-tier legal representation. Our approach combines deep legal knowledge
+                        with a passion for justice.</p>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <span class="iconify text-gold fs-1 me-3" data-icon="mdi:shield-check"></span>
+                                <div>
+                                    <h5 class="mb-1">Notary Public</h5>
+                                    <p class="small text-muted mb-0">Authorized Notary services in Vadodara.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <span class="iconify text-gold fs-1 me-3" data-icon="mdi:account-group"></span>
+                                <div>
+                                    <h5 class="mb-1">Client Focused</h5>
+                                    <p class="small text-muted mb-0">Personalized attention for every case.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-outline-light rounded-0 px-4">Know More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>36+</h3>
+                        <p>Google Reviews</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Cases Closed</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="practice" class="py-5 bg-darker">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="section-title center-title d-inline-block mb-4">
+                    <h2>Practice Areas</h2>
+                </div>
+                <p class="text-muted mt-3 mb-5">Comprehensive legal solutions tailored to your specific needs.</p>
+
+                <div class="filters-button-group mt-4">
+                    <button class="filter-btn active" data-filter="*">All</button>
+                    <button class="filter-btn" data-filter=".criminal">Criminal</button>
+                    <button class="filter-btn" data-filter=".civil">Civil</button>
+                    <button class="filter-btn" data-filter=".corporate">Corporate</button>
+                </div>
+            </div>
+
+            <div class="row g-4 service-grid">
+                <div class="col-lg-4 col-md-6 service-item criminal">
+                    <div class="service-card">
+                        <span class="iconify service-icon" data-icon="mdi:handcuffs"></span>
+                        <h4 class="mb-3">Criminal Defense</h4>
+                        <p class="text-muted mb-4">Aggressive defense for all criminal charges.</p>
+                        <ul class="list-unstyled service-list">
+                            <li>Bail Matters (Regular & Anticipatory)</li>
+                            <li>Sessions Court Trials</li>
+                            <li>High Court Appeals</li>
+                            <li>Cheque Bounce (138 NI Act)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 service-item civil">
+                    <div class="service-card">
+                        <span class="iconify service-icon" data-icon="mdi:home-city-outline"></span>
+                        <h4 class="mb-3">Property & Civil</h4>
+                        <p class="text-muted mb-4">Resolving complex property and civil disputes.</p>
+                        <ul class="list-unstyled service-list">
+                            <li>Property Possession Suits</li>
+                            <li>Landlord / Tenant Disputes</li>
+                            <li>Family Partition</li>
+                            <li>Injunction Suits</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 service-item civil">
+                    <div class="service-card">
+                        <span class="iconify service-icon" data-icon="mdi:human-male-female-child"></span>
+                        <h4 class="mb-3">Family Law</h4>
+                        <p class="text-muted mb-4">Compassionate handling of sensitive matters.</p>
+                        <ul class="list-unstyled service-list">
+                            <li>Divorce Proceedings</li>
+                            <li>Child Custody</li>
+                            <li>Maintenance Claims</li>
+                            <li>Domestic Violence</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 service-item corporate">
+                    <div class="service-card">
+                        <span class="iconify service-icon" data-icon="mdi:domain"></span>
+                        <h4 class="mb-3">Corporate Law</h4>
+                        <p class="text-muted mb-4">Legal Compliance for businesses.</p>
+                        <ul class="list-unstyled service-list">
+                            <li>Contract Drafting</li>
+                            <li>Company Registration</li>
+                            <li>Labor Laws</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 service-item criminal">
+                    <div class="service-card">
+                        <span class="iconify service-icon" data-icon="fluent:laptop-shield-20-regular"></span>
+                        <h4 class="mb-3">Cyber Crime</h4>
+                        <p class="text-muted mb-4">Expertise in IT Act and online fraud cases.</p>
+                        <ul class="list-unstyled service-list">
+                            <li>Data Theft</li>
+                            <li>Online Fraud</li>
+                            <li>Cyber Stalking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 service-item civil">
+                    <div class="service-card">
+                        <span class="iconify service-icon" data-icon="mdi:car-emergency"></span>
+                        <h4 class="mb-3">MACT Claims</h4>
+                        <p class="text-muted mb-4">Motor Accident Claims Tribunal cases.</p>
+                        <ul class="list-unstyled service-list">
+                            <li>Accident Compensation</li>
+                            <li>Insurance Claims</li>
+                            <li>Third Party Liability</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="team" class="py-5 bg-black">
+        <div class="container py-5">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">The Professionals</span>
+                <h2 class="serif-font text-white display-5">Meet Our Legal Team</h2>
+                <div class="mx-auto bg-gold mb-4" style="height: 3px; width: 60px;"></div>
+                <p class="text-muted col-lg-6 mx-auto">We believe that as a boutique practice, we are better placed to
+                    respond quickly to our clients' needs.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member">
+                        <div class="team-img-box">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000"
+                                alt="Yogesh Vaghela">
+                        </div>
+                        <div class="team-info">
+                            <h5>Yogesh Vaghela</h5>
+                            <span>Advocate & Notary</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-5" style="background: #0d3a24;">
+        <div class="container py-lg-4">
+            <div class="text-center mb-5">
+                <h2 class="serif-font">Client Testimonials</h2>
+                <div class="text-gold fs-5">
+                    <span class="iconify" data-icon="mdi:star"></span>
+                    <span class="iconify" data-icon="mdi:star"></span>
+                    <span class="iconify" data-icon="mdi:star"></span>
+                    <span class="iconify" data-icon="mdi:star"></span>
+                    <span class="iconify" data-icon="mdi:star"></span>
+                </div>
+                <p class="text-muted">Based on 36+ Google Reviews</p>
+            </div>
+
+            <div class="swiper testimonial-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <p class="text-light fst-italic">"Excellent advice and guidance. Advocate Darshan Patel
+                                helped me navigate a very difficult property dispute with ease. Highly recommended."</p>
+                            <h6 class="text-gold mt-3">- Rahul M.</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <p class="text-light fst-italic">"Best criminal lawyer in Vadodara. Very professional and
+                                transparent about the process. Got me the bail when others said it was impossible."</p>
+                            <h6 class="text-gold mt-3">- Amit S.</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <p class="text-light fst-italic">"Very supportive team. They handled my divorce case with
+                                great sensitivity and ensured I got my fair rights."</p>
+                            <h6 class="text-gold mt-3">- Priya K.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container py-lg-5">
+            <div class="contact-wrapper row g-0">
+                <div class="col-lg-5 contact-img d-none d-lg-block">
+                    <div class="contact-overlay text-white">
+                        <h3 class="serif-font mb-4">Contact Details</h3>
+
+                        <div class="d-flex mb-4">
+                            <span class="iconify text-gold fs-3 me-3" data-icon="carbon:location-filled"></span>
+                            <div>
+                                <h6 class="fw-bold mb-1">Office Address</h6>
+                                <p class="small  mb-0"><a class="text-white-50" target="_blank"
+                                        href="https://maps.app.goo.gl/bas3NtidwxjvatBJ8">A-1/43, Third Floor, Akshar
+                                        Pavilion, Yogi Nagar Twp, Gotri, Vadodara - 390021 (Gujarat) India</a></p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <span class="iconify text-gold fs-3 me-3" data-icon="carbon:phone-filled"></span>
+                            <div>
+                                <h6 class="fw-bold mb-1">Phone</h6>
+                                <p class="small text-white-50 mb-0"><a class="text-white-50"
+                                        href="tel:+919377777516">+91 93777 77516</a></p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <span class="iconify text-gold fs-3 me-3" data-icon="carbon:time-filled"></span>
+                            <div>
+                                <h6 class="fw-bold mb-1">Working Hours</h6>
+                                <p class="small text-white-50 mb-0">Mon - Sat: 9:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.3381126409663!2d73.15711097586644!3d22.303049042794715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc95e0a1d87b5%3A0xdc0f2217c182041!2sAdvocate%20Darshan%20Patel%20%26%20Associates!5e0!3m2!1sen!2sin!4v1769485050610!5m2!1sen!2sin"
+                                width="100%" height="150" style="border:0; filter: grayscale(100%) invert(94%);"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 p-3 p-md-5 bg-secondary">
+                    <div class="mb-4">
+                        <span class="text-gold text-uppercase fw-bold ls-1 small">Case Evaluation</span>
+                        <h2 class="serif-font mt-2">Request A Free Consultation</h2>
+                        <p class="text-muted">Fill out the form below and we will contact you on WhatsApp immediately.
+                        </p>
+                    </div>
+
+                    <form id="whatsappForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="text-muted small mb-1">Your Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small mb-1">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" pattern="[0-9]{10}" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="text-muted small mb-1">Case Category</label>
+                                <select class="form-select" id="caseType" required>
+                                    <option value="" selected disabled>Select...</option>
+                                    <option value="Criminal Matter">Criminal Matter</option>
+                                    <option value="Civil Dispute">Civil Dispute</option>
+                                    <option value="Family/Divorce">Family/Divorce</option>
+                                    <option value="Cheque Bounce">Cheque Bounce</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="text-muted small mb-1">Case Details</label>
+                                <textarea class="form-control" id="message" rows="4"></textarea>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <button type="submit" class="btn btn-gold w-100 py-3">
+                                    <span class="iconify me-2" data-icon="logos:whatsapp-icon"></span>WhatsApp Inquiry
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 border-top border-secondary text-center text-muted small">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Advocate Yogesh Vaghela. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <script>
+        // Init AOS
+        AOS.init({ duration: 800, once: true });
+
+        // Hero Swiper
+        new Swiper(".hero-swiper", {
+            loop: true,
+            effect: "fade",
+            autoplay: { delay: 6000 },
+            pagination: { el: ".swiper-pagination", clickable: true },
+        });
+
+        // Testimonial Swiper
+        new Swiper(".testimonial-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 4000 },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 3 }
+            },
+            pagination: { el: ".swiper-pagination", clickable: true },
+        });
+
+        // Isotope
+        window.onload = function () {
+            var grid = document.querySelector('.service-grid');
+            if (grid) {
+                var iso = new Isotope(grid, { itemSelector: '.service-item', layoutMode: 'fitRows' });
+                var filtersElem = document.querySelector('.filters-button-group');
+                filtersElem.addEventListener('click', function (event) {
+                    if (!event.target.matches('button')) return;
+                    var filterValue = event.target.getAttribute('data-filter');
+                    iso.arrange({ filter: filterValue });
+                    filtersElem.querySelector('.active').classList.remove('active');
+                    event.target.classList.add('active');
+                });
+            }
+        };
+
+        // WhatsApp Form
+        (function () {
+            'use strict'
+            const form = document.getElementById('whatsappForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                if (!form.checkValidity()) {
+                    event.stopPropagation();
+                    form.classList.add('was-validated');
+                    return;
+                }
+
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const caseType = document.getElementById('caseType').value;
+                const message = document.getElementById('message').value;
+
+                // Lawyer's number from GMB
+                const clientPhone = "919377777516";
+
+                const text = `*New Case Inquiry - Adv. Yogesh Vaghela*\n\n` +
+                    `*Name:* ${name}\n` +
+                    `*Phone:* ${phone}\n` +
+                    `*Type:* ${caseType}\n` +
+                    `*Details:* ${message || 'N/A'}`;
+
+                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                const baseUrl = isMobile ? `https://api.whatsapp.com/send` : `https://web.whatsapp.com/send`;
+                window.open(`${baseUrl}?phone=${clientPhone}&text=${encodeURIComponent(text)}`, '_blank');
+
+                form.reset();
+                form.classList.remove('was-validated');
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>
